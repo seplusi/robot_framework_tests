@@ -2,6 +2,7 @@
 Library    String
 Library    Dialogs
 Library    ./lib/CustomLib.py
+Library    SeleniumLibrary
 
 *** Variables ***
 ${NHTSA_URL}    https://api.nhtsa.gov
@@ -48,3 +49,11 @@ Perform a get API call with many params and validate
     Should Be Equal As Strings    ${json_object['results'][1]['Make']}    ACURA
     Should Be Equal As Strings    ${json_object['results'][0]['Model']}    RDX
     Should Be Equal As Strings    ${json_object['results'][1]['Model']}    RDX
+
+Validate login page
+    Open Browser    https://www.toyota.com    chrome
+    Maximize Browser Window
+    Wait Until Element Is Visible    css:a[data-di-id="#logo"]    10
+    ${attr_name}    Get Element Attribute    css:a[data-di-id="#logo"]    data-aa-link-text
+    Should Be Equal As Strings    ${attr_name}    Toyota Logo
+    [Teardown]    Close Browser

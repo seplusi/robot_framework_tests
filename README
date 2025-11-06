@@ -1,2 +1,12 @@
-Execute robot framework tests using cli:
+*
+* Execute robot framework tests using cli:
+*
 # robot MyFirstTest.robot
+
+*
+* Start http server serving the login.html page
+*
+# cd <cd to folder where login.html is>
+# python3 -m http.server
+Open browser and insert this url: http://8000/login.html
+Login web page is visible
