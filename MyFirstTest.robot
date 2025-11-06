@@ -34,4 +34,17 @@ Perform a get API call and validate
 Perform a get API call with many params and validate
     ${params} =    Create Dictionary    format=json    modelYear=2012    make=acura    model=rdx
     ${response}    Make Get Request    ${NHTSA_URL}/recalls/recallsByVehicle    ${params}
-    Log To Console    blah
+    Should Be Equal As Integers   ${response.status_code}    200
+    ${json_object}=    Evaluate    json.loads('''${response.text}''')    json
+    ${len}    Get Length    ${json_object.keys()}
+    Should Be Equal As Integers    ${len}    3
+    Should Be Equal As Strings    ${json_object.keys()}    dict_keys(['Count', 'Message', 'results'])
+    Should Be Equal As Integers    ${json_object['Count']}    2
+    Should Be Equal As Strings    ${json_object['Message']}    Results returned successfully
+    Length Should Be    ${json_object['results']}    2
+    Should Be Equal As Strings    ${json_object['results'][0]['ModelYear']}    2012
+    Should Be Equal As Strings    ${json_object['results'][1]['ModelYear']}    2012
+    Should Be Equal As Strings    ${json_object['results'][0]['Make']}    ACURA
+    Should Be Equal As Strings    ${json_object['results'][1]['Make']}    ACURA
+    Should Be Equal As Strings    ${json_object['results'][0]['Model']}    RDX
+    Should Be Equal As Strings    ${json_object['results'][1]['Model']}    RDX
