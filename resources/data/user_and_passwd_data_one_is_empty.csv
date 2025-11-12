@@ -1,0 +1,5 @@
+${user_csv};${passwd_csv};${ele_with_err};
+"";admin123;${username_err};
+Admin;"";${passwd_err};
+"!"£qwe!!!";"";${passwd_err};
+"";"!"£qwe!!!";${username_err};

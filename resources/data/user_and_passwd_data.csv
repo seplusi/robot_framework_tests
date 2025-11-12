@@ -1,0 +1,5 @@
+${user_csv};${passwd_csv};
+invalid_user;admin123;
+Admin;invalid_pass;
+"!"£qwe!!!";admin123;
+Admin;"!"£qwe!!!";

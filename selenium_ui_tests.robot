@@ -42,5 +42,5 @@ Validate login page
     Element Text Should Be    css:button[class*="owners"]    Owners
     Element Should Be Visible    css:button[data-content-section="Homepage Hero"][aria-label="next"]
     Element Should Be Visible    css:button[data-content-section="Homepage Hero"][aria-label="previous"]
-    Log To Console    sdvsdvsdv
+
     
