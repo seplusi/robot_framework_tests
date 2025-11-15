@@ -2,17 +2,17 @@
 Library    SeleniumLibrary
 
 *** Variables ***
-${login_brand_img}    css:div[class*="login-branding"] > img
-${login_title}    css:h5
-${username_label}    css:form[class="oxd-form"] > div[class="oxd-form-row"]:nth-of-type(1) label
-${passwd_label}    css:form[class="oxd-form"] > div[class="oxd-form-row"]:nth-of-type(2) label
+${login_brand_img}             css:div[class*="login-branding"] > img
+${login_title}                 css:h5
+${username_label}              css:form[class="oxd-form"] > div[class="oxd-form-row"]:nth-of-type(1) label
+${passwd_label}                css:form[class="oxd-form"] > div[class="oxd-form-row"]:nth-of-type(2) label
 ${login_username_input_box}    css:input[placeholder="Username"]
-${login_passwd_input_box}    css:input[placeholder="Password"]
-${submit_btn}    css:button[type="submit"]
-${forgot_pwd_lnk}    css:p[class*="login-forgot-header"]
-${invalid_credentials_err}    css:p[class*="oxd-alert-content-text"]
-${username_err}    css:div[class="oxd-form-row"]:nth-of-type(1) span[class*="oxd-input-field-error-message"]
-${passwd_err}    css:div[class="oxd-form-row"]:nth-of-type(2) span[class*="oxd-input-field-error-message"]
+${login_passwd_input_box}      css:input[placeholder="Password"]
+${submit_btn}                  css:button[type="submit"]
+${forgot_pwd_lnk}              css:p[class*="login-forgot-header"]
+${invalid_credentials_err}     css:p[class*="oxd-alert-content-text"]
+${username_err}                css:div[class="oxd-form-row"]:nth-of-type(1) span[class*="oxd-input-field-error-message"]
+${passwd_err}                  css:div[class="oxd-form-row"]:nth-of-type(2) span[class*="oxd-input-field-error-message"]
 
 *** Keywords ***
 Login Page is loaded
