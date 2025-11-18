@@ -78,7 +78,6 @@ Validate landidng page after successful login
     Element Text Should Be    ${topbar_upgr_btn}    Upgrade
     ${element_text}=    Get Text    ${dropdown_name}
     Should Match Regexp 	${element_text} 	^[a-zA-Z\\s]*$
-    
     Element Attribute Value Should Be    ${sidebar_search_box}    placeholder    Search
     Element Text Should Be    ${sidebar_admin_btn}    Admin
     Element Text Should Be    ${sidebar_pim_btn}    PIM
