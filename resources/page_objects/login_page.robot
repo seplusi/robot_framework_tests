@@ -34,3 +34,10 @@ Perform Invalid Login
     Wait Until Element Is Visible    ${invalid_credentials_err}
     Element Text Should Be    ${invalid_credentials_err}    Invalid credentials
     Login Page is loaded
+
+Perform a Valid Login
+    [Arguments]    ${user}    ${password}
+    Input Text    ${login_username_input_box}    ${user}
+    Input Text    ${login_passwd_input_box}    ${password}
+    Click Element    ${submit_btn}
+    Wait Until Element Is Not Visible    ${submit_btn}

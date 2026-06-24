@@ -66,6 +66,13 @@ Perform successful login
     Sidebar page is loaded
     Dashboard page is loaded
 
+Perform successful login using page object method
+    Login Page is loaded
+    Perform a Valid Login    user=Admin    password=admin123
+    Topbar page is loaded
+    Sidebar page is loaded
+    Dashboard page is loaded
+
 Validate landidng page after successful login
     Login Page is loaded
     Input Text    ${login_username_input_box}    Admin

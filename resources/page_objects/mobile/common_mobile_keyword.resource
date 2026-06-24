@@ -1,6 +1,6 @@
 *** Settings ***
 Library     AppiumLibrary
-Resource    resources/page_objects/mobile/select_with_or_without_account.robot
+Resource    select_with_or_without_account.robot
 
 *** Variables ***
 ${ANDROID_AUTOMATION_NAME}    UIAutomator2
@@ -20,8 +20,8 @@ I open an android chrome web browser and go to url
     Open chrome appium driver
     Page with or without account is loaded
     Click Element    ${without_acc_btn}
-    Wait Until Element Is Visible    id=com.android.chrome:id/ack_button
-    Click Element    id=com.android.chrome:id/ack_button
+    Wait Until Element Is Visible    id=com.android.chrome:id/positive_button
+    Click Element    id=com.android.chrome:id/positive_button
     Go To Url    ${URL}
     ${contexts}    Get Contexts
     Switch To Context    WEBVIEW_chrome

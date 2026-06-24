@@ -19,7 +19,7 @@ Open Browser with url and maximize
 Validate cookie page and accept it
     Wait Until Element Is Visible    css:a[data-di-id="#logo"]    10
     ${attr_name}    Get Element Attribute    css:a[data-di-id="#logo"]    data-aa-link-text
-    Should Be Equal As Strings    ${attr_name}    Toyota Logo
+    Should Be Equal As Strings    ${attr_name}    toyota logo
     Wait Until Element Is Visible    css:button[class="cookie-banner__accept"]    10
     Element Text Should Be    css:button[class="cookie-banner__accept"]    Accept
     Wait Until Element Is Visible    css:button[class="cookie-banner__reject"]    10
@@ -36,9 +36,9 @@ Validate login page
     Accept cookie    css:button[class="cookie-banner__accept"]    css:button[ria-label="Close Cookie Banner"]
     Wait Until Element Is Visible    css:a[data-di-id="#logo"]    10
     ${attr_name}    Get Element Attribute    css:a[data-di-id="#logo"]    data-aa-link-text
-    Should Be Equal As Strings    ${attr_name}    Toyota Logo
+    Should Be Equal As Strings    ${attr_name}    toyota logo
     Element Text Should Be    css:button[class*="select-vehicle"]    Vehicles
-    Element Text Should Be    css:button[class*="shopping-tools"]    Shopping
+    Element Text Should Be    css:button[class*="shopping-tools"]    Shop
     Element Text Should Be    css:button[class*="owners"]    Owners
     Element Should Be Visible    css:button[data-content-section="Homepage Hero"][aria-label="next"]
     Element Should Be Visible    css:button[data-content-section="Homepage Hero"][aria-label="previous"]
