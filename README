@@ -10,3 +10,33 @@
 # python3 -m http.server
 Open browser and insert this url: http://8000/login.html
 Login web page is visible
+
+*
+* Use TAGS in robot framework
+* *** Test Cases ***
+* Login test
+*     [Tags]    Smoke
+*     Open Browser    browser=${BROWSER}    url=${URL}
+*
+# robot --include smoke test_file.robot
+
+*
+* Select tests by name or by long name containing
+*
+# robot -t *requests* test_file.robot 
+==============================================================================
+Test File                                                                     
+==============================================================================
+Test with requests1                                                   ..{"Count":2,"Message":"Results returned successfully","Results":[{"VehicleDescription":"2013 Acura RDX SUV 4WD","VehicleId":7731},{"VehicleDescription":"2013 Acura RDX SUV FWD","VehicleId":7520}]}
+Test with requests1                                                   | PASS |
+------------------------------------------------------------------------------
+Test with requests2                                                   | FAIL |
+HTTPError: 400 Client Error: Bad Request for url: https://api.nhtsa.gov/recalls/recallsByVehicle?%7B'format':%20'json'%7D
+------------------------------------------------------------------------------
+Test File                                                             | FAIL |
+2 tests, 1 passed, 1 failed
+==============================================================================
+Output:  /home/luis/Documents/Projects/VSCprojects/robot_framework_revival_tests/output.xml
+Log:     /home/luis/Documents/Projects/VSCprojects/robot_framework_revival_tests/log.html
+Report:  /home/luis/Documents/Projects/VSCprojects/robot_framework_revival_tests/report.html
+(.venv)
